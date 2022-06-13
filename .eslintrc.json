@@ -27,7 +27,8 @@
     "plugin:jest/recommended",
     "plugin:@typescript-eslint/eslint-recommended",
     "plugin:@typescript-eslint/recommended",
-    "plugin:prettier/recommended"
+    "plugin:prettier/recommended",
+    "plugin:import/typescript"
   ],
   "rules": {
     "arrow-body-style": [0],
@@ -36,7 +37,6 @@
     "class-methods-use-this": [0, "always"],
     "comma-dangle": [0],
     "import/no-named-as-default": [0],
-    "import/no-unresolved": [1],
     "jsx-a11y/label-has-for": [0],
     "max-len": [1, 165],
     "no-unused-expressions": [2, { "allowShortCircuit": true }],
@@ -55,7 +55,7 @@
     "react/no-array-index-key": [1],
     "no-nested-ternary": [1],
     "jsx-a11y/label-has-associated-control": [1],
-    "import/prefer-default-export": [1],
+    "import/prefer-default-export": "off",
     "import/no-cycle": [1],
     "no-param-reassign": [2, { "props": false }],
     "import/no-extraneous-dependencies": [2, { "devDependencies": true }],
@@ -71,6 +71,12 @@
     "@typescript-eslint/no-empty-function": [0],
     "@typescript-eslint/no-var-requires": [0],
     "@typescript-eslint/no-unused-vars": [2],
+    "import/no-unresolved": [2, { "commonjs": true, "amd": true }],
+    "import/named": [2],
+    "import/namespace": [2],
+    "import/default": [2],
+    "import/export": [2],
+    "no-undef": "warn",
     "import/extensions": [
       "error",
       "ignorePackages",
