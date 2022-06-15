@@ -5,6 +5,7 @@ import { store, persistor } from 'store/configure_store';
 import { PersistGate } from 'redux-persist/integration/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router } from 'react-router-dom';
+import { ApiProvider } from 'context/ApiContext';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
@@ -12,9 +13,11 @@ const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
   <Provider store={store}>
     <PersistGate loading={null} persistor={persistor}>
-      <Router basename={process.env.PUBLIC_URL}>
-        <App />
-      </Router>
+      <ApiProvider>
+        <Router basename={process.env.PUBLIC_URL}>
+          <App />
+        </Router>
+      </ApiProvider>
     </PersistGate>
   </Provider>
 );

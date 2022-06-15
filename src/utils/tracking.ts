@@ -6,6 +6,7 @@ interface Data {
 }
 
 const addError = (data: Data): void => {
+  // eslint-disable-next-line no-console
   console.error(data);
 };
 

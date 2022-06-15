@@ -76,7 +76,8 @@
     "import/namespace": [2],
     "import/default": [2],
     "import/export": [2],
-    "no-undef": "warn",
+    "no-undef": "off",
+    "prefer-const": "warn",
     "import/extensions": [
       "error",
       "ignorePackages",

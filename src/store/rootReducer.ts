@@ -1,7 +1,8 @@
 import { combineReducers, Reducer } from 'redux';
 import storage from 'redux-persist/lib/storage';
+import { globalReducer } from './global';
 
-const appReducer = combineReducers({});
+const appReducer = combineReducers({ globalReducer });
 
 const rootReducer: Reducer = (state, action) => {
   let newState = state;
